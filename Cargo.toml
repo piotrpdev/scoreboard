@@ -30,3 +30,29 @@ st7735-lcd = "0.10.0"
 
 [build-dependencies]
 embuild = "0.33"
+
+[lints.rust]
+unsafe_code = "forbid"
+unused_imports = "warn"
+unused_variables = "warn"
+unused_must_use = "deny"
+dead_code = "warn"
+missing_docs = "allow"
+async_fn_in_trait = "allow"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+nursery = { level = "warn", priority = -1 }
+redundant_pub_crate = "warn"
+unwrap_used = "warn"
+expect_used = "warn"
+panic = "deny"
+unreachable = "warn"
+todo = "deny"
+unimplemented = "deny"
+await_holding_lock = "deny"
+indexing_slicing = "deny"
+float_cmp = "deny"
+modulo_one = "deny"
+missing_errors_doc = "allow"
